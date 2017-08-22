@@ -14,7 +14,7 @@ sleep 1
 
 getPods="$(exec kubectl get pods --namespace=$3)"
 IPmaster = "master"
-echo "Pods " $getPods
+#echo "Pods " $getPods
 master="hadoop-nn"
 isRunningMaster=0
 isRunningWorkers=0
