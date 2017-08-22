@@ -8,7 +8,7 @@ kubectl config use-context $3
 
 kubectl run $1 --image=hash14/hadoop-nn --port=50070 --port=8088 --replicas=1 --namespace=$3
 
-kubectl run $2 --image=hash14/hadoop-sl --replicas=3 --namespace=$3
+kubectl run $2 --image=hash14/hadoop-sl --replicas=$4 --namespace=$3
 
 sleep 1
 
