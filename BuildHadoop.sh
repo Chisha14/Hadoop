@@ -18,9 +18,9 @@ IPmaster=""
 master=""
 isRunningMaster=0
 isRunningWorkers=0
-declare -a runningWorkers
-workers=()
-IPs=()
+#runningWorkers=()
+#workers=()
+#IPs=()
 for word in $getPods
 do
     if [[ $word == $1* ]] ; 
