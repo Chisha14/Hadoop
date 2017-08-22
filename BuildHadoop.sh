@@ -18,7 +18,7 @@ IPmaster=""
 master=""
 isRunningMaster=0
 isRunningWorkers=0
-runningWorkers=()
+declare -a runningWorkers
 workers=()
 IPs=()
 for word in $getPods
