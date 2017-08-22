@@ -29,7 +29,7 @@ do
 	echo "Master " $master
     elif [[ $word == $2* ]] ;
     then
-	workers+=("$word") 
+	workers+=($word) 
 	echo "Workers " ${workers[@]}
     fi
 done
