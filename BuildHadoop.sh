@@ -18,8 +18,8 @@ IPmaster=""
 master=""
 isRunningMaster=0
 isRunningWorkers=0
-runningWorkers=()
-workers=()
+runningWorkers=() || true
+workers=() || true
 IPs=()
 for word in $getPods
 do
