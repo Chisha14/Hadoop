@@ -13,9 +13,9 @@ kubectl run $2 --image=hash14/hadoop-sl --replicas=$4 --namespace=$3
 sleep 1
 
 getPods="$(exec kubectl get pods --namespace=$3)"
-IPmaster = "master"
+$IPmaster="master"
 #echo "Pods " $getPods
-master="hadoop-nn"
+$master="hadoop-nn"
 isRunningMaster=0
 isRunningWorkers=0
 runningWorkers=()
