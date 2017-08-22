@@ -14,12 +14,12 @@ sleep 1
 
 getPods="$(exec kubectl get pods --namespace=$3)"
 IPmaster=""
-#echo "Pods " $getPods
+echo "Pods " $getPods
 master=""
 isRunningMaster=0
 isRunningWorkers=0
-runningWorkers=() || true
-workers=() || true
+runningWorkers=()
+workers=()
 IPs=()
 for word in $getPods
 do
