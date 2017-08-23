@@ -123,6 +123,21 @@ ssh -o StrictHostKeyChecking=no root@$IPworkers "echo -ne '<configuration>\n\t<p
 let "i++"
 done
 
+let "i=0"
+let "j=0"
+for IPworkers in ${IPs[@]}
+do
+
+	for IPofAllworkers in ${IPs[@]}
+	do
+		ssh -o StrictHostKeyChecking=no root@$IPworkers "echo ${IPofAllworkers}    ${workers[$j]} >> /etc/hosts"
+		let "j++"
+	done
+
+let "i++"
+let "j=0"
+done
+
 kubectl --namespace=$3 exec -it $master sbin/start-all.sh
 
 kubectl config set-context default --namespace=default
